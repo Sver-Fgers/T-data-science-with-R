@@ -1,0 +1,164 @@
+Introduction to datascience using R programming language
+
+##### Resources
+- R for everyone, Advance Analytics and Graphics 📚️
+
+
+##### Topics checklist
+- [x] getting started
+	- downloads and installation
+- [x] the r environment
+	- command line 
+	- rstudio
+	- microsft vscode or studio
+- [ ] r packages
+	- installing
+	- loading 
+	- building 
+- [ ] basics of r and basic data types
+	- basic math
+	- variables
+	- data types
+	- vectors
+	- calling functions
+	- function documentation
+	- missing data
+	- pipes
+- [ ] advanced data structures
+	- data.frames
+	- lists
+	- matrices
+	- arrays
+- [ ] control statements
+	- if and else
+	- switch 
+	- if-else
+	- compound tests
+	- loops, the un-r way to iterate
+		- for loops
+		- while loops
+		- controlling loops
+- [ ] functions
+	- hello, world
+	- function arguments
+	- return values
+	- do.call
+- [ ] Working with files
+	- reading csvs
+	- excel data
+	- reading from databases
+	- data from other statistics tools
+	- r for binary files
+	- data included with r
+	- extracting data from websites
+	- reading json data
+- [ ] introduction to statistical graphics
+	- base graphics
+	- ggplot2
+- [ ] manipulating data
+	- [ ] group manipulation
+		- apply family
+		- aggregate
+		- plyr
+		- data.table
+	- [ ] faster group manipulation with dplyr
+		- pipes
+		- tbl
+		- select
+		- filter
+		- slice
+		- mutate
+		- summarize
+		- group_by
+		- arrange
+		- do
+		- dplyr with databases
+	- [ ] iterating with purrr
+		- map
+		- map with specified types
+		- iterating over a data.frame
+		- map with multiple inputs
+	- [ ] data reshapping
+		- cbind and rbind
+		- joins
+		- reshape2
+	- [ ] reshaping data in the tidyverse
+		- binding rows and columns
+		- joins with dplyr
+		- converting data formats
+	- [ ] manipulating strings
+		- paste
+		- sprintf
+		- extracting text 
+		- regular expressions
+- [ ] deepdive into statistics
+	- [ ] probability distributions
+		- normal 
+		- binomial
+		- poisson
+		- other distributions
+	- [ ] basic statistics
+		- summary statistics
+		- correlation and covariance
+		- T-tests
+		- ANOVA
+	- [ ] linear models
+		- simple linear regression
+		- multiple regression
+	- [ ] generalized linear models
+		- logistic regression
+		- poisson regression
+		- other generalized linear models
+		- survival analysis
+	- [ ] model diagnostics
+		- residuals
+		- comparing models
+		- cross-validation
+		- boostrap
+		- step-wise variable selection
+	- [ ] regularization and shrinkage
+		- elastic net
+		- bayesian shrinkage
+	- [ ] non linear model
+		- non-linear least squares
+		- splines
+		- generalized additive models
+		- decision trees
+		- boosted trees
+		- random forest
+	- [ ] time series and autocorrection
+		- auto regressive moving averages
+		- VAR
+		- GARCH
+	- [ ] Clustering
+		- k-means
+		- PAM
+		- hierarchical clustering
+	- [ ] model fitting with caret
+		- caret basics
+		- caret options
+		- tuning a boosted tree
+- [ ] Data presentation
+	- [ ] reproduce-ability and report with knitr
+		- installing a latex program
+		- latex primer
+		- using knitr with latex
+	- [ ] Rich Documents with RMarkdown
+		- Document Compilation
+		- Document Header
+		- Markdown Primer
+		- Markdown Code Chunks
+		- htmlwidgets
+		- RMarkdown Slideshows
+	- [ ] Interactive Dashboards with Shiny
+		- Shiny in RMarkdown
+		- Reactive Expressions in Shiny
+		- Server and UI
+- [ ] Building R Packages
+	- Folder Structure
+	- Package Files
+	- Package Documentation
+	- Tests
+	- Checking, Building and Installing
+	- Submitting to CRAN
+	- C++ Code
