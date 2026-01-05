@@ -1,0 +1,89 @@
+---
+title : "live session"
+format : html
+editor : visual
+jupyter: r
+---
+
+class
+    grouping
+    numeric 
+
+typeof
+    refer to exact type
+
+##### numeric data
+
+```{r}
+x <- 10
+y <- 2L
+typeof(x)
+typeof(y)
+is.integer(y)
+```
+
+```{r}
+class(2.6) # numeric
+class(2.6 + 4L) # numeric data
+typeof(4)
+```
+
+1 FLOAT - 255KB
+1 INTEGER - 20KB
+1 DOUBLE - 100KB
+
+```{r}
+typeof(5L / 2L) # INEGER DIVISION
+
+```
+
+```{r}
+class
+```
+
+
+##### character data
+
+```{r}
+x <- "data"
+class(x)
+typeof(x)
+```
+
+
+```{r}
+y <- factor("data")
+class(y)
+typeof(y)
+```
+
+```{r}
+nchar(x)
+
+nchar("hello")
+
+nchar(3)
+
+nchar(452)
+```
+
+
+```{r}
+x <- as.Date("10-12-2025")
+class(x)
+
+typeof(x)
+
+as.numeric(x)
+class(x)
+```
+
+
+```{r}
+k <- TRUE
+class(k)
+
+is.logical(k)
+```
+
+
