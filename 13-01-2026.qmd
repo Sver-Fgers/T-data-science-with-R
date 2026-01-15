@@ -1,0 +1,122 @@
+# 13-01-2026
+```{r}
+2+2
+```
+
+
+## working with packages in r
+packages in R
+anyone can create an r package, this makes it extensible
+
+```{r}
+# package installation
+
+install.package{"tableone"} #installation is needed once
+library(tableone) #to use it, load it library`
+```
+
+
+# 14-01-2026 lesson
+```{r}
+# ebola data analysis
+# name
+# date
+# link - http://bit.ly/view-ebola-data
+
+# load packages
+if(!require(pacman)) install.packages("pacman")
+pacman::p_load(
+    tidyverse, #this is a meta package
+    inspectdf,
+    plotly, #package for plots 
+    janitor,
+    visdat,
+    esquisse
+)
+```
+
+
+# load your data
+```{r}
+esl <- read_csv("ebola_sierra_leone.csv")
+# use relative links if not in same folder
+
+glimpse(esl)
+
+
+# Why `glimpse()`?
+# - Works in Quarto
+# - Shows structure + data types
+# - Part of `dplyr` (tidyverse)
+# useful If you’re just exploring interactively (not rendering)
+
+```
+
+
+# look at the data
+```{r}
+esl <- read_csv("ebola_sierra_leone.csv")
+
+```
+View(esl)
+
+
+```{r}
+```{r}
+install.packages("readr")
+library(readr)
+
+esl <- read_csv("ebola_sierra_leone.csv")
+
+```
+
+```{r}
+installed.packages()[, "Package"]
+```
+
+# data exploration
+head(dataset, n=number of rows) #returns first six rows
+tails() shows bottom rows 
+by default six
+
+ncol(dataset)
+nrow(dataset)
+dim() dimension x y
+
+summary() 
+
+all functions are from base r packages
+?function name to know more about function 
+
+# general overview
+
+visdat::vis_dat(dataset) #shows visualization of teh data
+which are characters, date, numeric, NA
+
+
+
+```{r}
+inspectdf::inspect_cat(esd)
+```
+
+# categorical overview
+inspect::inspect_cat() send output to showplot function 
+this is function nesting
+
+show_plot(inspect_cat(dataset))
+
+ggplotly(
+    show_plot(inspect_cat(dataset))
+) #shows interactive document
+
+better = show_plot(inspect_cat(dataset))
+
+
+ggplotly(
+    better
+)
+
+# numerical 
+num = <- show_plot(inspect_num(dataset))
+
+ggplotly on num summary

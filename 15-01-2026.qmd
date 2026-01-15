@@ -1,0 +1,196 @@
+```{r}
+
+# analysing data
+# single data outputs (variables)
+ebola_sierra_leone$age
+
+# output is a vector
+# a vector is a list of things of the same type
+
+# what we are doing is asking basic question of the data
+
+# mean age
+mean(ebola_sierra_leone$age)
+
+# shows NA, indicationg that some values are missing, so it can find mean when some of the data is missing. you have to get read of it
+
+mean(ebola_sierra_leone$age, na.rm = True)
+
+# instead of TRUE, T also work
+
+# why not remove by NA by default - it wants you to be sure, 
+# because the mean is not actually correct 
+# instead the mean of 10% of the sample is so so so, a better answer
+```
+
+
+
+```{r}
+median(ebola_sierra_leone$age, na.rm = True)
+
+# checkpoint
+# how can the code be made better
+# age_vec <- ebola_sierra_leone$age
+
+sd(age_vec, na.rm = TRUE) #standard deviation
+min(age_vec, na.rm = TRUE) # minimum age
+max(age_vec, na.rm = TRUE) #max age
+summary(age_vec) #summary takes into account the missing values
+
+
+length(age_vec) # length of vector, # what do you notice
+sum(age_vec, na.rm = TRUE)
+
+# while all this are a lot you don't need to cram them
+```
+
+
+# visualizing single variables: numerical ------
+```{r}
+hist(age_vec) # histogram of the data
+boxplot(age_vec)
+
+
+# ggplot visualizations are usually 
+# more specifically esquisse
+# it provides a point and click interface that makes it easy to create ggplot figures
+# ggplot a little difficult so usage will be later
+# esquisse is limited than ggplot but easier to work with
+
+
+esquisse(age_vec)
+# drag the age variable into the x-axis
+
+# with esquisse instead of passing individual variables, you pass the whole dataset to it
+
+esquisse(ebola_sierra_leone)
+# dragging in shows 
+# can change the visualization type - density, boxplot (kind of similar but more rounded)
+
+# goal is for single but lets do more
+# frag sex variable to y axis
+
+# to change colors, drag sex variable into fill
+# legend shows at the sides showing male and female categories
+
+# play around with esquisse, and share screenshots - assignments
+# try adding lables eg title, subtitle, caption
+# try the plot options - adjust the bandwidth
+
+
+# go to the code and copy it
+# reproducebility - copy the code and rerun for later use
+
+
+# what is a violin plot
+# on the x axis bunch of ages, wherever its fat they are more people there
+# an hour glass way of representation
+
+
+# pasting the code shows the ggplot variant of the code, esquisse makes it easy
+
+# attractive and complex codes, you need ggplotly
+
+# redo process for single variable 
+# pull age, copy to x axis and copy code
+```
+
+
+# visualizing single variables: categorical
+categorical data shows distinction between entities
+male female
+africa europe
+age is continous 0, 1, 2 etc
+
+```{r}
+ebola_sierra_leone$district
+
+# vector of district
+# the most common way of analysis for a single is to make a 
+# table to look at the numbers
+
+# builtin
+table(ebola_sierra_leone$district)
+# there is a nicer version built by the community in the janitor package
+
+janitor::tabyl(ebola_sierra_leone$district) # the formatting is better for reading
+# a percent column is included
+# percentage of various table 0.775 is 77.5 %
+
+# the exact syntax is a little different
+?tabyl 
+
+# the way to call it is 
+tabyl(ebola_sierra_leone, district)
+
+# this makes it easy to do cross tabulation or tables
+
+tabyl(ebola_sierra_leone, district, sex)
+# shows account by sex and district
+
+```
+
+# visualizing single variables :: categorical
+
+```{r}
+# ggplotly vs base always go with ggplotly
+
+# in base r
+barplot(table(ebola_sierra_leone$district))
+
+# ggplotly is always recommended
+
+# esquisser function
+esquisser(ebola_sierra_leone)
+
+# drag district to x axis and add color
+# explore but always check the code for intuition
+
+```
+
+
+# answer to questions
+
+when was the first date reported - technically the date of sample
+
+min(ebola_sierra_leone$date_of_sample)
+
+
+# what was the median age of those affected
+
+median(ebola_sierra_leone, na.rm = TRUE)
+
+# Had there been more cases in men or women
+
+tably(dataset, sex)
+
+visualize it
+esquisser(dataset) - barchart
+
+# which district has the most reported cases
+
+same esquisser code but for district, replace anywhere district fell
+
+# by the last year was it growing or reducing 
+ - crate a diagram shiwinng the nunmber if cases easc day
+esquiser(dataset)
+
+
+drag date of onset to x axis - wheb teh person got sick
+that shows a sense of how mny people wey getting sick n each tyear on each day
+
+copy code
+
+paste and check at the end of june
+not very clear so answer is unclear because if a treadline
+
+
+
+# assignment - use new dataset
+ https://bit.ly/view-yaounde-covid-data
+
+
+
+# why not excel?
+the benefit of r are not obvius on smaller dataset cos excel can handle it, r baeuty come with complexity
+
