@@ -1,0 +1,46 @@
+---
+title: "ebola-analysis"
+author: "odogwu"
+date: "2026-01-19"
+output: html_document
+---
+
+this is an example text
+
+[google](https://google.com)
+
+![](images/clipboard-4099148782.jpeg)
+
+```{r setup}
+x <- 1:5
+print(x)
+
+2 + 4
+
+
+```
+
+```{r}
+max_height <- max(women$height)
+
+```
+
+the maximum height in the women dataset is `r max_height`
+
+```{r}
+women
+```
+
+```{r}
+pacman::p_load(flextable,gt,reactable)
+```
+
+```{r}
+flextable::flextable(women)
+```
+```{r}
+gt::gt(women)
+```
+```{r}
+reactable::reactable(women)
+```
