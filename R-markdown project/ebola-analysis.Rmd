@@ -5,3 +5,91 @@ date: "2026-01-19"
 output: html_document
 ---
 
+
+```{r include=FALSE}
+if(!require (pacman)) install.packages("pacman")
+pacman::p_load(tidyverse, visdat, esquisse, inspectdf, plotly, janitor)
+```
+
+```{r include=FALSE}
+pacman::p_load(flextable, gt, reactable)
+```
+
+```{r include=FALSE}
+pacman::p_load(readr)
+```
+
+
+```{r include=FALSE}
+ebola_data <- read_csv("/Users/bosslistic10/Documents/t-tutorial/T-data-science-with-R/ebola_sierra_leone.csv")
+```
+
+# Flextable of women dataset
+
+
+```{r echo=FALSE}
+flextable(women)
+
+```
+## Head
+```{r echo=FALSE}
+head(ebola_data, 10)
+```
+
+## Tail
+```{r echo=FALSE}
+tail(ebola_data, 10)
+```
+
+*No of columns*
+```{r echo=FALSE}
+ncol(ebola_data)
+```
+
+
+*No of rows*
+```{r echo=FALSE}
+nrow(ebola_data)
+```
+
+
+*Dimension*
+```{r echo=FALSE}
+dim(ebola_data)
+```
+
+## Summary of ebola dataset
+```{r echo=FALSE}
+summary(ebola_data)
+```
+
+**Image visualization of dataset**
+```{r echo=FALSE}
+visdat::vis_dat(ebola_data)
+```
+### Categories of ebola dataset
+```{r echo=FALSE}
+inspectdf::inspect_cat(ebola_data)
+```
+
+## Plot of ebola data
+```{r echo=FALSE, warning=FALSE}
+show_plot(inspect_cat(ebola_data))
+```
+
+```{r include=FALSE}
+interact <- show_plot(inspect_cat(ebola_data))
+```
+
+**ggplotly** 
+```{r echo=FALSE, warning=FALSE}
+ggplotly(interact)
+
+```
+
+**Histogram of numeric columns in ebola data**
+```{r echo=FALSE}
+show_plot(inspect_num(ebola_data))
+
+```
+
