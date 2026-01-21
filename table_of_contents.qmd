@@ -1,3 +1,94 @@
-14-01-2026 - data exploration
-19-01-2026 - r markdown
+**Always check the date for the class and find the corresponding lesson note in the repo. If you don't find an associated lesson note, check the books we are using. Although i will always try to specify**
 
+# 26-11-2025
+- introduction to R
+    - objects in R
+    - creating objects in R
+    - how assignment works
+    - difference between <- and = assignment
+    **The recommended method is with to use <- assignment style**
+    - difference between the print function and view function
+        - using view function to display data 
+    - renaming objects in R
+    - removing objects in R
+- sample functions in R
+    - sqrt
+    - paste
+    - plot
+    - head
+
+# 10-12-2025
+- introduction to basic data types in R
+    - integers
+    - floats
+    - doubles
+    - character 
+- finding information about a data type
+    - class function
+    - typeof() function
+    - is.datatype () function
+
+# 13-01-2026
+- introduction to R packages
+- how to install R packages
+    - installing 
+    - loading
+
+# 14-01-2026 
+- contd of R packages 
+    - introduction to pacman
+    - using pacman to install more packages at once
+- using R packages for exploration of ebola_sierra_leone dataset 
+    - numerical exploration 
+    - categorical exploration
+
+# 15-01-2026
+- more data exploration using packages like tidyverse, visdat, esquisse, inspectdf, plotly, janitor
+- finding basic information about a dataset such as:
+    - mean
+    - median
+    - sd
+    - min
+    - max
+    - summary
+    - length
+    - sum
+- creating basic plots
+    - histograms
+    - boxplots
+- creating more advanced plots with esquisse and ggplotly 
+
+# 16-01-2026
+- introduction to the R IDE user interface
+- proper data analysis uisng R projects
+    - data
+    - scripts
+    - outputs
+- example data visualization using R project workflow
+    - calculating basic summary statistics of ebola_sierra_leone dataset 
+    - adding the right files in the proper project folder
+    - outputting data visualizations
+
+# 19-01-2026 
+- r markdown
+    **read the section on r markdown in the book - foundation of data analysis using R** 
+
+# 20-01-2026
+- introduction to pipes 
+    **the lesson note is part of this folder - title "introduction to pipes"**
+- introduction to data structures
+    - vectors **the notes on vectors are in the book - foundation of data analysis using R**
+        - creating a vector
+        - checking the class of a vector
+        - knowing if a data is a vector
+        - manipulating vectors
+            - performing logical operations on vectors
+        - creating data frames from vectors
+            - predefining vectors in variables 
+            - defining vectors directly inside the dataframe function 
+            **Note that a dataframe must have the same number of rows**
+        - extracting vectors from data frames
+    - tibbles (tible comes from tidyr package, a meta package of tidyverse)
+        - converting from dataframe to tibble
+        - advantages of tibble over dataframe
+        - seeing tibble in action when reading csv files using base r vs readr

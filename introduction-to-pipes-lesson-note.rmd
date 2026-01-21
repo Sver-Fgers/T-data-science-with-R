@@ -1,0 +1,103 @@
+First install required packages
+
+```{R}
+if(!require(pacman)) install.packages("pacman")
+pacman:: p_load(tidyverse, #pipe
+ gt, #cool tables
+  outbreaks #dataset 
+  )
+```
+
+# analyzing the data using conventional method
+
+```{R}
+# here we are using the quakes dataset from outbreaks
+
+quakes # display the content of the data
+```
+
+## task 1 : show the top 5 earthquakes by magnitude
+
+- using the conventional way
+```{R}
+arranged_data <- arrange(quakes, -mag)
+head(arranged_data, n=5) # head picks the top five rows
+	
+```
+
+- or using nested functions
+
+```{R}
+head(arrange(quakes, -mag), n=5)
+```
+
+# using pipes (%>%) to simplify this process
+
+the shortcut for pipe is:
+- shift comand + m on mac
+- shift control + m on windows
+
+```{R}
+quakes %>% # this is read as (and then) 
+	arrange(-mag) %>% 
+	head(n=5)
+```
+
+here gt() is used to visualize the output in a table format 
+
+```{R}
+	quakes %>% # read as and then 
+		arrange(-mag) %>% 
+		head(n=5) %>%
+		gt()
+```
+
+## task 2 : show the 4 deepest quakes using pipe approach
+
+```{R}
+quakes %>% # read as and then 
+	arange(-depth) %>% 
+	head(n=4) %>%
+
+arrange(quakes, -mg) %>% 
+	head(n=5) 
+```
+
+## task 3 : show the name of the 5 youngest people from the varicella_sim_berlin dataset (dataset is from outbreaks package)
+
+```{R}
+varicella_sim_berlin %>%
+	as_tibble() %>%
+	arrange(age) %>%
+	head(n=5) %>%
+	gt()
+```
+
+the output table includes other columns that are not too useful in this case. To improve the format, the select function from dplyr package can be used to select only the columns that are needed (firstname, lastname, age)
+
+```{R}
+select(women, weight, height) # example showing the function syntax
+
+# applying this to solve our problem	
+varicella_sim_berlin %>%
+	as_tibble() %>%
+	arrange(age) %>%
+	head(n=5) %>%
+	select(firstname, lastname, age) %>%
+	gt()
+```
+
+# task 3: show the sex of the 4 oldest people from the same dataset
+
+```{R}
+varicella_sim_berlin %>%
+	as_tibble() %>%
+	arrange(-age) %>% # shows oldest people
+	head(n=4) %>%
+	select(sex, age) %>%
+	gt()
+```
+
+# note : the pipe function comes from the magrittr package which is part of the tidyverse package
+
+# r has a base pipe, the syntax is |>

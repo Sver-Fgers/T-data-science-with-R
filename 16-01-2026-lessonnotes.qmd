@@ -1,10 +1,4 @@
-topics
-- essential setps 
-import 
-calculating basic summary statistics
-
-skip setting up data analysis project folder
-
+**also read the section on projects in the book "foundation of data analysis with R"**
 
 # what is a project and an R studio Project
 

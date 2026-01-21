@@ -108,7 +108,7 @@ ebola_df2
 
 
 # -------------------------------
-# Varicella simulation dataset
+# Varicella simulation dataset using tibble and pipes 
 # -------------------------------
 
 # Convert to tibble
