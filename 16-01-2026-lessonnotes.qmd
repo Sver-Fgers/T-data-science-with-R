@@ -1,0 +1,25 @@
+topics
+- essential setps 
+import 
+calculating basic summary statistics
+
+skip setting up data analysis project folder
+
+
+# what is a project and an R studio Project
+
+project setup is the first stage of data analysis
+
+a project is a folder that contains all files associated with a specific analysis
+
+- input data
+- scripts
+- outputs
+
+R project feature makes working with projects easy
+
+
+
+# understand R studio interface
+objectives
+identify and use the tabs : source, console, environment, history, files, plots, packages, help and viewer
